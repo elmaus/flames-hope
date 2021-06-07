@@ -32,15 +32,15 @@ function App() {
 
   return (
     <div className="App pb-5 bg-dark">
-      <h1 className="text-light pt-5 fw-bold">Flames Hope</h1>
+      <h1 className="text-light p-5 fw-bold">Flames Hope</h1>
       
       <div>
-	  	<label class="form-label text-light pt-4">Your Name</label>
+	  	<label class="form-label text-light pt-5">Your Name</label>
         <input id="input1" className="form-control form-control-lg" type="text" onChange={e => {onTyping1(e.target.value)}}/>
         <label class="form-label text-light pt-4">Name of your flames/hope</label>
         <input id="input2" className="form-control form-control-lg" type="text" onChange={e => {onTyping2(e.target.value)}}/>
         
-		<h3 className="text-light p-4 fw-bold">{result}</h3>
+		<h3 className="text-light p-5 fw-bold">{result}</h3>
 
 		<Buttons isactive={(name1 && name2) ? "" : "disabled"} toset={finalResult} res={reset} name1={name1} name2={name2}/>
       </div>
