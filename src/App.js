@@ -3,27 +3,27 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  const [mode, setMode] = useState('flames');
-  const [name1, setName1] = useState('');
-  const [name2, setName2] = useState('');
-  const [result, setResult] = useState('Your Reuslt is..');
+  	const [mode, setMode] = useState('flames');
+  	const [name1, setName1] = useState('');
+  	const [name2, setName2] = useState('');
+  	const [result, setResult] = useState('Your Reuslt is..');
 
-  const filterout = () => {
-    let tempname1 = ''
-    let tempname2 = ''
-    for (let i=0; i<name1.length; i++) {
-      if (name2.includes(name1[i])) {
-        continue;
-      }
-      tempname1 += name1[i]
-    }
+  	const filterout = () => {
+    	let tempname1 = ''
+    	let tempname2 = ''
+    	for (let i=0; i<name1.length; i++) {
+      		if (name2.includes(name1[i])) {
+        	continue;
+      		}
+      		tempname1 += name1[i]
+    	}
 
-    for (let i=0; i<name2.length; i++) {
-      if (name1.includes(name2[i])) {
-        continue;
-      }
-      tempname2 += name2[i]
-    }
+    	for (let i=0; i<name2.length; i++) {
+      		if (name1.includes(name2[i])) {
+        		continue;
+      		}
+      		tempname2 += name2[i]
+    	}
 
     return tempname1.length + tempname2.length
   }
