@@ -45,10 +45,10 @@ function Buttons(props) {
     }
 
     return (
-        <div class="btn-group col-12 mb-3 mt-3">
-			<input className={props.isactive + " " + "btn btn-primary border-end bordr-dark outline-dark"} type="submit" onClick={() => getResult(flames, 6)} value="FLAMES"/>
-            <input className="btn btn-primary" type="submit" onClick={props.res} value="Refresh"/>
-			<input className={props.isactive + " " + "btn btn-primary border-start border-dark outline-dark"} type="submit" onClick={() => getResult(hope, 4)} value="HOPE"/>
+        <div class="btn-group col-12 pb-5 mt-3">
+			<input className={props.isactive + " " + "btn btn-primary"} type="submit" onClick={() => getResult(flames, 6)} value="FLAMES"/>
+            <input className="btn btn-info" type="submit" onClick={props.res} value="Refresh"/>
+			<input className={props.isactive + " " + "btn btn-primary"} type="submit" onClick={() => getResult(hope, 4)} value="HOPE"/>
 		</div>
     )
 }

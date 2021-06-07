@@ -32,7 +32,7 @@ function App() {
 
   return (
     <div className="App pb-5 bg-dark">
-      <h1 className="text-light fw-bold">Flames Hope</h1>
+      <h1 className="text-light pt-5 fw-bold">Flames Hope</h1>
       
       <div>
 	  	<label class="form-label text-light pt-4">Your Name</label>
