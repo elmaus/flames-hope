@@ -6,7 +6,8 @@ function Buttons(props) {
 
     
     const flames = ['Sweet', 'Freind', 'Lover', 'Affectionate', 'Marriage', 'Enemy'];
-    const hope = ["Hinde", "Oo", "Pwede", "Ewan"];
+    const hope = ["Ewan", "Hinde", "Oo", "Pwede"];
+    const flameshope = ['Ewan', 'Freind', 'Lover', 'Affectionate', 'Marriage', 'Enemy', "Sweet", "Hinde", "Oo", "Pwede"]
 
     const filterout = () => {
     	let tempname1 = ''
@@ -25,15 +26,15 @@ function Buttons(props) {
       		tempname2 += name2[i]
     	}
 
-        let nameWithoutSpace = ''
-        let joined = tempname1.length + tempname2.length;
-        for (let i=0; i<nameWithoutSpace.length; i++) {
+        let nameWithoutSpace = '';
+        let joined = tempname1 + tempname2;
+        for (let i=0; i<joined.length; i++) {
             if (joined[i] != " ") {
                 nameWithoutSpace += joined[i]
             }
         }
-
-        return nameWithoutSpace;
+        console.log(nameWithoutSpace);
+        return nameWithoutSpace.length;
     }
 
 
@@ -41,14 +42,16 @@ function Buttons(props) {
         let leftOver = filterout();
         let relationNumber = 0;
         relationNumber = leftOver % len;
-        props.toset(mode[relationNumber])
+        props.toset(mode[relationNumber]);
+        
     }
 
     return (
-        <div class="btn-group col-12 pb-5 mt-3">
-			<input className={props.isactive + " " + "btn btn-primary"} type="submit" onClick={() => getResult(flames, 6)} value="FLAMES"/>
-            <input className="btn btn-info" type="submit" onClick={props.res} value="Refresh"/>
-			<input className={props.isactive + " " + "btn btn-primary"} type="submit" onClick={() => getResult(hope, 4)} value="HOPE"/>
+        <div class="col-12 pb-5 mt-2">
+			<input className={props.isactive + " " + "btn btn-primary col-12 mb-3"} type="submit" onClick={() => getResult(flames, 6)} value="FLAMES"/>
+            <input className={props.isactive + " " + "btn btn-primary col-12 mb-3"} type="submit" onClick={() => getResult(hope, 4)} value="HOPE"/>
+            <input className={props.isactive + " " + "btn btn-primary col-12 mb-3"} type="submit" onClick={() => getResult(flameshope, 10)} value="FLAMESHOPE"/>
+            <input className="btn btn-info col-12" type="submit" onClick={props.res} value="Refresh"/>
 		</div>
     )
 }
